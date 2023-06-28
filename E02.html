@@ -5,15 +5,27 @@
     //Melancia: 3 Kg
     //Abacate: 4 Unidades
     //Cebola: 1.1 Kg
-    //Peça para o usuário informar o preço do Kg ou da Unidade de cada um dos produtos que comprou (citados acima) e peça também para o usuário informar quanto dinheiro possui para realizar a compra.
-    //Calcule o custo total dos alimentos e verifique se há dinheiro suficiente para realizar a compra, indicando se sobrará ou faltará dinheiro, e também apresentando qual foi a quantia que sobrou ou faltou para realizar a compra. Apresente também na tela o valor total da compra.
+    //Peça para o usuário informar o preço do Kg ou da Unidade de cada um dos produtos que comprou 
+    //(citados acima) e peça também para o usuário informar quanto dinheiro possui para realizar a compra.
+    //Calcule o custo total dos alimentos e verifique se há dinheiro suficiente para realizar a compra, 
+    //indicando se sobrará ou faltará dinheiro, e também apresentando qual foi a quantia que sobrou ou faltou para realizar a compra. Apresente também na tela o valor total da compra.
 
     //ENTRADA
-
-
+  const precoMa = Number(prompt(`Informe o preço do mamão`).replace(",","."));
+  const precoMe = Number(prompt(`Informe o preço do kg da melacia`).replace(",","."));
+  const precoA = Number(prompt(`Informe o preço do Abacate`).replace);
+  const precoC = Number(prompt(`Informe o preço da cebola`).replace(",","."));
+  const dinheiro = Number(prompt(`Informe quando dinheiro você tem para realizar a compra`).replace(",","."));
     //PROCESSAMENTO
-
-
+  const soma = (precoMa * 5) + (precoMe / 3) + (precoA * 4) + (precoC / 1.1);
     //SAÍDA
-
-</script>
+    if(dinheiro > soma){
+    alert(`Sua compra sobrou dinheiro`);
+}
+    else if(soma == dinheiro){
+    alert(`Seu dinheiro foi suficiente, não sobrou troco`);
+}
+    else if(soma > dinheiro){
+    alert(`Falta reais para completar sua compra.`);
+}
+</script>`
