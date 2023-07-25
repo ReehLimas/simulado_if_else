@@ -14,20 +14,23 @@
     //ENTRADA
 const salario = Number(prompt(`Informe seu salario mensal:`).replace(",","."));
 const horas = Number(prompt(`Informe quantas horas trabalha`).replace(",","."));
-const cargo = prompt(`Informe seu cargo`);
+const cargo = prompt(`Informe seu cargo`).trim().toUpperCase();
 
     //PROCESSAMENTO
 if(cargo == "estagiario" && horas < 6){
-    alert(`você recebe ${salario / horas / 20 } reais por hora.`)
+    alert(`você recebe ${salario / horas * 20 } reais por hora.`)
 }
 else if(cargo == "estagiario" && horas > 6){
     alert(`Precisa ser contratado, recebendo ${salario + salario * 50/100}`)
 }
 else if(cargo == "programador" && horas <= 8){
-    alert(`você recebe ${salario / horas / 20}`)
+    alert(`você recebe ${salario / horas * 20}`)
 }
 else if(cargo == "programador" && horas > 8){
     alert(`você deve receber mais ${salario + salario * 30/100}`)
+}
+else{
+    alert(`Valor invalido!`)
 }
 
     //SAÍDA

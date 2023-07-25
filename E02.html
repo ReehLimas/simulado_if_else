@@ -13,19 +13,19 @@
     //ENTRADA
   const precoMa = Number(prompt(`Informe o preço do mamão`).replace(",","."));
   const precoMe = Number(prompt(`Informe o preço do kg da melacia`).replace(",","."));
-  const precoA = Number(prompt(`Informe o preço do Abacate`).replace);
+  const precoA = Number(prompt(`Informe o preço do Abacate`).replace(",","."));
   const precoC = Number(prompt(`Informe o preço da cebola`).replace(",","."));
   const dinheiro = Number(prompt(`Informe quando dinheiro você tem para realizar a compra`).replace(",","."));
     //PROCESSAMENTO
-  const soma = (precoMa * 5) + (precoMe / 3) + (precoA * 4) + (precoC / 1.1);
+  const soma = (precoMa * 5) + (precoMe * 3) + (precoA * 4) + (precoC * 1.1);
     //SAÍDA
     if(dinheiro > soma){
-    alert(`Sua compra sobrou dinheiro`);
+    alert(`Sua compra sobrou dinheiro ${dinheiro - soma} reais.`);
 }
     else if(soma == dinheiro){
     alert(`Seu dinheiro foi suficiente, não sobrou troco`);
 }
     else if(soma > dinheiro){
-    alert(`Falta reais para completar sua compra.`);
+    alert(`Falta ${soma - dinheiro} reais para completar sua compra .`);
 }
 </script>`
